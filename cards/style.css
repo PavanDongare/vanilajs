@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.btn{
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin-top: 20x;
+    padding: 10px 15px;
+}
+
+.btn small {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.clear{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.cards{
+    perspective: 1000px;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.card{
+    position: absolute;
+    opacity: 0;
+    font-size: 1.5em;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card.active {
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.inner-card{
+    box-shadow: 0 1px 10px black;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+}
+
+.inner-card-front,.inner-card-back{
+    position: absolute;
+    top:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: white;
+}
